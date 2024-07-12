@@ -2,3 +2,4 @@ streamlit
 requests
 urllib3
 py3Dmol
+toml
