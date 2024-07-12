@@ -31,6 +31,14 @@ def visualize_pdb(pdb_data):
     view.zoomTo()
     return view
 
+def extract_plddt(pdb_data):
+    plddt_scores = []
+    for line in pdb_data.splitlines():
+        if line.startswith("ATOM"):
+            plddt = float(line[60:66].strip())
+            plddt_scores.append(plddt)
+    return plddt_scores
+
 st.set_page_config(page_title='ESMFold Protein Structure Predictor', page_icon='🎈')
 
 st.sidebar.title('🎈 ESMFold')
@@ -82,6 +90,11 @@ if st.sidebar.button("Predict Structure"):
         view = visualize_pdb(pdb_data)
         view_html = view._make_html()
         st.components.v1.html(view_html, width=800, height=800)
+        
+        st.subheader("pLDDT Scores")
+        st.write("The predicted Local Distance Difference Test (pLDDT) score is a confidence measure for the predicted structure, ranging from 0 to 1. Higher scores indicate greater confidence in the accuracy of the predicted structure.")
+        plddt_scores = extract_plddt(pdb_data)
+        st.info(f"Average pLDDT score: {sum(plddt_scores) / len(plddt_scores):.2f}")
         
     else:
         st.sidebar.error("Please enter a protein sequence or upload a FASTA file.")
