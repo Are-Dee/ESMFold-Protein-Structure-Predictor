@@ -1,7 +1,6 @@
 # ESMFold Protein Structure Predictor
 
-[![ESMFold Protein Structure Predictor](https://github.com/user-attachments/assets/a185fe09-338b-4cb1-90f3-b8055a2856c4)]([https://share.streamlit.io/yourusername/esmfold-predictor/main/app.py](https://esmfold-protein-structure-predictor.streamlit.app/))
-
+[![ESMFold Protein Structure Predictor](https://github.com/user-attachments/assets/a185fe09-338b-4cb1-90f3-b8055a2856c4)](https://esmfold-protein-structure-predictor.streamlit.app/)
 
 ## Overview
 The ESMFold Protein Structure Predictor is a web application that uses the ESM-2 language model to predict the 3D structure of proteins based on their amino acid sequences. This tool allows users to input protein sequences in text format or upload a FASTA file and visualize the predicted protein structure in 3D. It also provides pLDDT scores, which are confidence measures for the predicted structure.
