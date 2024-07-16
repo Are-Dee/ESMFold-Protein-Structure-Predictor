@@ -1,6 +1,6 @@
 # ESMFold Protein Structure Predictor
 
-![image](https://github.com/user-attachments/assets/0dd9c44b-bbae-4402-98b1-35c1e9c25fcf)(https://esmfold-protein-structure-predictor.streamlit.app/)
+![Untitled](https://github.com/user-attachments/assets/31a216d6-6c10-4fda-bd81-f2222c54ba05)
 
 
 ## Overview
